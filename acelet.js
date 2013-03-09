@@ -1,4 +1,4 @@
-function acelet() {
+function acelet(syntax, fontSize, theme, softTabs, tabSize, wrapText, indentGuides, showInvisibles)  {
   function encodeString(string) {
     return encodeURIComponent(string
            .replace(/\\/g,"\\\\")
@@ -14,10 +14,10 @@ function acelet() {
   return '
     data:text/html;charset=utf-8,
     <title>Acelet</title>
-    <link rel="shortcut icon" href="http://g.etfv.co/http://www.sublimetext.com"/>
+    <link rel="shortcut icon" href="http://tsi.github.com/acelet/favicon.ico"/>
     <style>
       body {margin: 0; background: #000;}
-      #editor {font-size: 18px; width: 100%; height: 90%; height: -webkit-calc(100% - 40px); height: -moz-calc(100% - 40px); height: calc(100% - 40px); border: none; outline: none}
+      #editor {font-size: ' + fontSize + '; width: 100%; height: 90%; height: -webkit-calc(100% - 40px); height: -moz-calc(100% - 40px); height: calc(100% - 40px); border: none; outline: none}
       button, #footer, #mode, .mode {border: none; background: none; padding: 0 10px; margin: 0; color: #ccc; font: 13px/20px Arial, sans-serif; text-align: center;}
       button:hover {cursor: pointer; color: #fff;}
       span.mode {float: right;}
@@ -31,15 +31,15 @@ function acelet() {
     <div id="footer"><a href="https://gist.github.com/tsi/5089758">Acelet</a> - Powered by <a href="http://ace.ajax.org" taget="_blank">Ace</a></div>
     <script src="http://ajaxorg.github.com/ace/build/src/ace.js" type="text/javascript" charset="utf-8"></script>
     <script>
-      var syntax = "scss";
       var e = ace.edit("editor");
-      e.setShowInvisibles(true);
-      e.setTheme("ace/theme/monokai");
-      e.getSession().setMode("ace/mode/" + syntax);
-      document.getElementById("mode").value = syntax;
-      e.getSession().setUseWrapMode(true);
-      e.getSession().setTabSize(2);
-      e.setValue(decodeString("'+aceletValue+'"), -1);
+      e.setShowInvisibles(' + showInvisibles + ');
+      e.setTheme("' + theme + '");
+      e.getSession().setMode("ace/mode/" + "' + syntax + '");
+      document.getElementById("mode").value = "' + syntax + '";
+      e.getSession().setUseWrapMode(' + wrapText + ');
+      e.getSession().setUseSoftTabs(' + softTabs + ');
+      e.getSession().setTabSize(' + tabSize + ');
+      e.setValue(decodeString("' + aceletValue + '"), -1);
       e.focus();
       function decodeString(string) {
         return decodeURIComponent(string)
