@@ -7,6 +7,6 @@ javascript:(function(){
     aceletTab.location = acelet();
     aceletTab.focus();
   };
-  script.src = 'acelet.min.js';
+  script.src = 'https://raw.github.com/tsi/acelet/master/acelet.min.js';
   document.body.appendChild(script);
 }());
