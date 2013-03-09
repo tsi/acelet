@@ -1,0 +1,12 @@
+javascript:(function(){
+  var aceletTab = window.open('about:blank', 'Acelet');
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.async = true;
+  script.onload = function(){
+    aceletTab.location = acelet();
+    aceletTab.focus();
+  };
+  script.src = 'https://raw.github.com/tsi/acelet/master/acelet.min.js';
+  document.body.appendChild(script);
+}());
