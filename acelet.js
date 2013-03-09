@@ -56,7 +56,7 @@ function acelet(syntax, fontSize, theme, softTabs, tabSize, wrapText, indentGuid
       /*
       inspired by the discussion on https://coderwall.com/p/lhsrcq
       Written by Tsachi Shlidor (@shlidor)
-      GPL Licenced
+      BSD Licenced
       
       Possible improvements:
       * Improve encoding/decoding
