@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Acelet</title>
+  <title>Acelet ♦ Hack in the browser</title>
   <meta name="description" content="Acelet is a bookmarklet that allows you to edit selected text and code snippets in an advanced code editor, right in your browser.">
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="favicon.ico" />
@@ -18,24 +18,21 @@
 </head>
 <body>
 
+  <p class="tldr">tl;dr - Select some text/code. Push the button. Hack.</p>
 
-  <a title="Acelet" class="acelet" href="javascript:(function(){var aceletTab=window.open('about:blank', 'Acelet');var script=document.createElement('script');script.type='text/javascript';script.async=true;script.onload=function(){aceletTab.location=acelet();aceletTab.focus();};script.src='https://raw.github.com/tsi/acelet/master/acelet.min.js';document.body.appendChild(script);}());">Acelet</a>
-  <p>tl;dr - Select some text/code. Push the button. Hack.</p>
-  <p class="intro">Ever wished you could just click to edit a code snippet? in the browser??</p>
-  <p>Acelet is a bookmarklet that allows you to edit selected text and code snippets
-in an advanced code editor, right in your browser.</p>
+  <a title="Acelet" class="acelet" href="#">Acelet</a>
 
   <section class="defaults">
     <h4>Choose your defaults:</h4>
     <div class="select-wrp">
-      <label for="mode">Default syntax:</label>
-      <select id="mode" size="1">
+      <label for="syntax">Default syntax:</label>
+      <select id="syntax" size="1">
         <option value="abap">ABAP</option><option value="asciidoc">AsciiDoc</option><option value="c9search">C9Search</option><option value="coffee">CoffeeScript</option><option value="coldfusion">ColdFusion</option><option value="csharp">C#</option><option value="css">CSS</option><option value="curly">Curly</option><option value="dart">Dart</option><option value="diff">Diff</option><option value="dot">Dot</option><option value="glsl">Glsl</option><option value="golang">Go</option><option value="groovy">Groovy</option><option value="haxe">haXe</option><option value="haml">HAML</option><option value="html">HTML</option><option value="c_cpp">C/C++</option><option value="clojure">Clojure</option><option value="jade">Jade</option><option value="java">Java</option><option value="jsp">JSP</option><option value="javascript">JavaScript</option><option value="json">JSON</option><option value="jsx">JSX</option><option value="latex">LaTeX</option><option value="less">LESS</option><option value="lisp">Lisp</option><option value="liquid">Liquid</option><option value="lua">Lua</option><option value="luapage">LuaPage</option><option value="lucene">Lucene</option><option value="makefile">Makefile</option><option value="markdown">Markdown</option><option value="objectivec">Objective-C</option><option value="ocaml">OCaml</option><option value="perl">Perl</option><option value="pgsql">pgSQL</option><option value="php">PHP</option><option value="powershell">Powershell</option><option value="python">Python</option><option value="r">R</option><option value="rdoc">RDoc</option><option value="rhtml">RHTML</option><option value="ruby">Ruby</option><option value="scad">OpenSCAD</option><option value="scala">Scala</option><option value="scss">SCSS</option><option value="sh">SH</option><option value="sql">SQL</option><option value="stylus">Stylus</option><option value="svg">SVG</option><option value="tcl">Tcl</option><option value="tex">Tex</option><option value="text" selected="selected">Text</option><option value="textile">Textile</option><option value="typescript">Typescript</option><option value="vbscript">VBScript</option><option value="xml">XML</option><option value="xquery">XQuery</option><option value="yaml">YAML</option>
       </select>
     </div>
     <div class="select-wrp">
-      <label for="fontsize">Font size:</label>
-      <select id="fontsize" size="1">
+      <label for="fontSize">Font size:</label>
+      <select id="fontSize" size="1">
         <option value="10px">10px</option>
         <option value="11px">11px</option>
         <option value="12px">12px</option>
@@ -87,24 +84,41 @@ in an advanced code editor, right in your browser.</p>
     </div>
     <div class="checkboxes-wrp">
       <div class="checkbox-wrp">
-        <input type="checkbox" name="show_hidden" id="show_hidden" checked="checked">
-        <label for="show_hidden">Show Invisibles</label>
+        <input type="checkbox" id="softTabs" checked="checked">
+        <label for="softTabs">Use Soft Tabs</label><span> - <input type="number" id="tabSize" size="1" value="2"> spaces</span>
       </div>
       <div class="checkbox-wrp">
-        <input type="checkbox" id="soft_tab" checked="checked">
-        <label for="soft_tab">Use Soft Tabs</label>
+        <input type="checkbox" name="indentGuides" id="indentGuides" checked="checked">
+        <label for="indentGuides">Show Indent Guides</label>
       </div>
       <div class="checkbox-wrp">
-        <input type="checkbox" name="display_indent_guides" id="display_indent_guides" checked="checked">
-        <label for="display_indent_guides">Show Indent Guides</label>
+        <input type="checkbox" name="showInvisibles" id="showInvisibles" checked="checked">
+        <label for="showInvisibles">Show Invisibles</label>
       </div>
     </div>
   </section>
 
+  <p class="intro">Ever wished you could just click to edit a piece of code? without leaving the browser??</p>
+  <p>Acelet is a bookmarklet that allows you to edit selected text and code snippets
+in an advanced code editor, right in your browser.</p>
+
+  <footer>
+    <div class="footer-first">
+      <a href="http://tsi.github.com/acelet/">Acelet</a> - Powered by <a href="http://ace.ajax.org" taget="_blank">Ace</a> | BSD licenced.
+    </div>
+    <div class="footer-second">
+      Created by Tsachi Shlidor (<a target="_blank" href="https://twitter.com/shlidor">@shlidor</a>)
+    </div>
+  </footer>
+
+  <a href="https://github.com/tsi/acelet">
+    <img style="z-index: 50000; position: absolute; top: 0; right: 0; border: 0; width: 125px; height: 125px" src="https://a248.e.akamai.net/camo.github.com/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub">
+  </a>
+
   <div class="share-btns">
     <div id="fb-root"></div>
     <div class="fb-like" data-send="false" data-layout="button_count" data-width="1" data-show-faces="false"></div>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-text="Hack in the browser with Acelet">Tweet</a>
   </div>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
