@@ -1,0 +1,267 @@
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400,700);
+/* ==========================================================================
+   Acelet styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+/* line 14, ../scss/main.scss */
+html,
+button,
+input,
+select,
+textarea {
+  color: #fff;
+}
+
+/* line 18, ../scss/main.scss */
+html {
+  min-height: 100%;
+  background-image: -webkit-gradient(radial, 100% 100%, 0, 100% 100%, 100, color-stop(0%, #590202), color-stop(100%, #0e0000));
+  background-image: -webkit-radial-gradient(100% 100%, #590202 0%, #0e0000 100%);
+  background-image: -moz-radial-gradient(100% 100%, #590202 0%, #0e0000 100%);
+  background-image: -o-radial-gradient(100% 100%, #590202 0%, #0e0000 100%);
+  background-image: radial-gradient(100% 100%, #590202 0%, #0e0000 100%);
+}
+
+/* line 23, ../scss/main.scss */
+body {
+  font: 24px/1.5 normal "Oleo Script Swash Caps", cursive;
+  text-shadow: -1px -1px 0 #270101;
+  text-align: center;
+  width: 700px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* line 32, ../scss/main.scss */
+::-moz-selection {
+  background: #590202;
+  text-shadow: none;
+}
+
+/* line 37, ../scss/main.scss */
+::selection {
+  background: #590202;
+  text-shadow: none;
+}
+
+/* line 42, ../scss/main.scss */
+.acelet {
+  position: relative;
+  display: inline-block;
+  padding: 0.2em 0.4em 0.3em;
+  margin: 0.8em 0 0.4em;
+  font-size: 4em;
+  line-height: 1;
+  background-color: #012128;
+  background-image: -webkit-gradient(radial, 100% 100%, 0, 100% 100%, 200, color-stop(20%, #025e73), color-stop(150%, transparent), color-stop(200%, #012128));
+  background-image: -webkit-radial-gradient(100% 100%, #025e73 20%, transparent 150%, #012128 200%);
+  background-image: -moz-radial-gradient(100% 100%, #025e73 20%, transparent 150%, #012128 200%);
+  background-image: -o-radial-gradient(100% 100%, #025e73 20%, transparent 150%, #012128 200%);
+  background-image: radial-gradient(100% 100%, #025e73 20%, transparent 150%, #012128 200%);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  -webkit-box-shadow: 2px 2px 100px #590202, 2px 2px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 100px #590202, 2px 2px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 100px #590202, 2px 2px 2px rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  text-shadow: -1px -1px 0 #013541;
+  border-top: 1px solid #026278;
+  border-bottom: 1px solid #012128;
+  color: #fff;
+  text-decoration: none;
+}
+/* line 59, ../scss/main.scss */
+.acelet:after {
+  content: "Drag me to your bookmarks bar";
+  display: block;
+  font-size: 25%;
+}
+/* line 64, ../scss/main.scss */
+.acelet:before {
+  content: "⤹";
+  display: block;
+  font-size: 150%;
+  -webkit-transform: rotate(200deg);
+  -moz-transform: rotate(200deg);
+  -ms-transform: rotate(200deg);
+  -o-transform: rotate(200deg);
+  transform: rotate(200deg);
+  position: absolute;
+  top: -.5em;
+  right: -.8em;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 black;
+}
+/* line 75, ../scss/main.scss */
+.acelet:hover {
+  background-color: #025e73;
+  -webkit-box-shadow: 2px 2px 100px #bd0404, 2px 2px 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 2px 2px 100px #bd0404, 2px 2px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 2px 100px #bd0404, 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* line 81, ../scss/main.scss */
+.intro {
+  font-size: 1.8em;
+}
+
+/* line 85, ../scss/main.scss */
+.defaults {
+  margin: 3em auto 2em;
+  text-align: left;
+  padding-left: 1.2em;
+  padding-bottom: .7em;
+  border: 1px solid #450202;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 40px #270101;
+  -moz-box-shadow: inset 0 0 40px #270101;
+  box-shadow: inset 0 0 40px #270101;
+}
+/* line 93, ../scss/main.scss */
+.defaults h4 {
+  text-align: center;
+  margin: .7em;
+}
+
+/* line 99, ../scss/main.scss */
+.select-wrp,
+.checkbox-wrp {
+  margin-right: .8em;
+  text-align: left;
+}
+
+/* line 103, ../scss/main.scss */
+.select-wrp {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 106, ../scss/main.scss */
+.select-wrp label {
+  display: block;
+  font-size: .7em;
+}
+/* line 110, ../scss/main.scss */
+.select-wrp select {
+  font-size: .7em;
+  padding: 0.1em 0.2em;
+  color: #fff;
+  border: none;
+  background: #025e73;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 118, ../scss/main.scss */
+.select-wrp option {
+  color: #222;
+}
+
+/* line 122, ../scss/main.scss */
+.checkboxes-wrp {
+  display: inline-block;
+  line-height: 1.2;
+}
+
+/* line 127, ../scss/main.scss */
+.checkbox-wrp label {
+  font-size: .7em;
+}
+
+/* line 132, ../scss/main.scss */
+.share-btns {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 137, ../scss/main.scss */
+.share-btns > iframe,
+.share-btns > div {
+  display: inline-block;
+  vertical-align: top;
+  margin: .4em;
+}
+/* line 142, ../scss/main.scss */
+.share-btns .fb-like > span {
+  vertical-align: top;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/* line 151, ../scss/main.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+/* line 158, ../scss/main.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/* line 165, ../scss/main.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 170, ../scss/main.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 182, ../scss/main.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 191, ../scss/main.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/* line 196, ../scss/main.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 201, ../scss/main.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 205, ../scss/main.scss */
+.clearfix {
+  *zoom: 1;
+}

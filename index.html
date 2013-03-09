@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Acelet</title>
+  <meta name="description" content="Acelet is a bookmarklet that allows you to edit selected text and code snippets in an advanced code editor, right in your browser.">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="favicon.ico" />
+
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+  <![endif]-->
+</head>
+<body>
+
+  <a title="Acelet" class="acelet" href="#">Acelet</a>
+  <p>tl;dr - Select some text/code. Press the button. Hack.</p>
+  <p class="intro">Ever wished you could just click to edit a code snippet? in the browser??</p>
+  <p>Acelet is a bookmarklet that allows you to edit selected text and code snippets
+in an advanced code editor, right in your browser.</p>
+
+  <section class="defaults">
+    <h4>Choose your defaults:</h4>
+    <div class="select-wrp">
+      <label for="mode">Default syntax:</label>
+      <select id="mode" size="1">
+        <option value="abap">ABAP</option><option value="asciidoc">AsciiDoc</option><option value="c9search">C9Search</option><option value="coffee">CoffeeScript</option><option value="coldfusion">ColdFusion</option><option value="csharp">C#</option><option value="css">CSS</option><option value="curly">Curly</option><option value="dart">Dart</option><option value="diff">Diff</option><option value="dot">Dot</option><option value="glsl">Glsl</option><option value="golang">Go</option><option value="groovy">Groovy</option><option value="haxe">haXe</option><option value="haml">HAML</option><option value="html">HTML</option><option value="c_cpp">C/C++</option><option value="clojure">Clojure</option><option value="jade">Jade</option><option value="java">Java</option><option value="jsp">JSP</option><option value="javascript">JavaScript</option><option value="json">JSON</option><option value="jsx">JSX</option><option value="latex">LaTeX</option><option value="less">LESS</option><option value="lisp">Lisp</option><option value="liquid">Liquid</option><option value="lua">Lua</option><option value="luapage">LuaPage</option><option value="lucene">Lucene</option><option value="makefile">Makefile</option><option value="markdown">Markdown</option><option value="objectivec">Objective-C</option><option value="ocaml">OCaml</option><option value="perl">Perl</option><option value="pgsql">pgSQL</option><option value="php">PHP</option><option value="powershell">Powershell</option><option value="python">Python</option><option value="r">R</option><option value="rdoc">RDoc</option><option value="rhtml">RHTML</option><option value="ruby">Ruby</option><option value="scad">OpenSCAD</option><option value="scala">Scala</option><option value="scss">SCSS</option><option value="sh">SH</option><option value="sql">SQL</option><option value="stylus">Stylus</option><option value="svg">SVG</option><option value="tcl">Tcl</option><option value="tex">Tex</option><option value="text" selected="selected">Text</option><option value="textile">Textile</option><option value="typescript">Typescript</option><option value="vbscript">VBScript</option><option value="xml">XML</option><option value="xquery">XQuery</option><option value="yaml">YAML</option>
+      </select>
+    </div>
+    <div class="select-wrp">
+      <label for="fontsize">Font size:</label>
+      <select id="fontsize" size="1">
+        <option value="10px">10px</option>
+        <option value="11px">11px</option>
+        <option value="12px">12px</option>
+        <option value="13px">13px</option>
+        <option value="14px">14px</option>
+        <option value="16px">16px</option>
+        <option value="18px" selected="selected">18px</option>
+        <option value="20px">20px</option>
+        <option value="24px">24px</option>
+      </select>
+    </div>
+    <div class="select-wrp">
+      <label for="theme">Theme:</label>
+      <select id="theme" size="1">
+        <optgroup label="Bright">
+          <option value="ace/theme/chrome">Chrome</option>
+          <option value="ace/theme/clouds">Clouds</option>
+          <option value="ace/theme/crimson_editor">Crimson Editor</option>
+          <option value="ace/theme/dawn">Dawn</option>
+          <option value="ace/theme/dreamweaver">Dreamweaver</option>
+          <option value="ace/theme/eclipse">Eclipse</option>
+          <option value="ace/theme/github">GitHub</option>
+          <option value="ace/theme/solarized_light">Solarized Light</option>
+          <option value="ace/theme/textmate">TextMate</option>
+          <option value="ace/theme/tomorrow">Tomorrow</option>
+          <option value="ace/theme/xcode">XCode</option>
+        </optgroup>
+        <optgroup label="Dark">
+          <option value="ace/theme/ambiance">Ambiance</option>
+          <option value="ace/theme/chaos">Chaos</option>
+          <option value="ace/theme/clouds_midnight">Clouds Midnight</option>
+          <option value="ace/theme/cobalt">Cobalt</option>
+          <option value="ace/theme/idle_fingers">idleFingers</option>
+          <option value="ace/theme/kr_theme">krTheme</option>
+          <option value="ace/theme/merbivore">Merbivore</option>
+          <option value="ace/theme/merbivore_soft">Merbivore Soft</option>
+          <option value="ace/theme/mono_industrial">Mono Industrial</option>
+          <option value="ace/theme/monokai" selected="selected">Monokai</option>
+          <option value="ace/theme/pastel_on_dark">Pastel on dark</option>
+          <option value="ace/theme/solarized_dark">Solarized Dark</option>
+          <option value="ace/theme/twilight">Twilight</option>
+          <option value="ace/theme/tomorrow_night">Tomorrow Night</option>
+          <option value="ace/theme/tomorrow_night_blue">Tomorrow Night Blue</option>
+          <option value="ace/theme/tomorrow_night_bright">Tomorrow Night Bright</option>
+          <option value="ace/theme/tomorrow_night_eighties">Tomorrow Night 80s</option>
+          <option value="ace/theme/vibrant_ink">Vibrant Ink</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="checkboxes-wrp">
+      <div class="checkbox-wrp">
+        <input type="checkbox" name="show_hidden" id="show_hidden" checked="checked">
+        <label for="show_hidden">Show Invisibles</label>
+      </div>
+      <div class="checkbox-wrp">
+        <input type="checkbox" id="soft_tab" checked="checked">
+        <label for="soft_tab">Use Soft Tabs</label>
+      </div>
+      <div class="checkbox-wrp">
+        <input type="checkbox" name="display_indent_guides" id="display_indent_guides" checked="checked">
+        <label for="display_indent_guides">Show Indent Guides</label>
+      </div>
+    </div>
+  </section>
+
+  <div class="share-btns">
+    <div id="fb-root"></div>
+    <div class="fb-like" data-send="false" data-layout="button_count" data-width="1" data-show-faces="false"></div>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+  </div>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="js/main.js"></script>
+  <script src="js/fileWatcher.js"></script>
+</body>
+</html>
