@@ -1,0 +1,43 @@
+html,
+button,
+input,
+select,
+textarea {
+  color: #fff;
+}
+
+html {
+  min-height: 100%;
+  @include background-image(radial-gradient(100% 100%, $red 0, darken($red, 15%) 100%));
+}
+
+body {
+  font: 24px/1.5 normal 'Oleo Script Swash Caps', cursive;
+  text-shadow: -1px -1px 4px darken($red, 10%);
+  text-align: center;
+}
+
+::-moz-selection {
+  background: lighten($red, 15%);
+  text-shadow: none;
+}
+
+::selection {
+  background: lighten($red, 15%);
+  text-shadow: none;
+}
+
+a,
+a:visited {
+  color: lighten($red, 15%);
+  text-decoration: none;
+  @include transition(all .5s);
+  &:hover {
+    color: lighten($red, 30%);
+  }
+}
+
+pre {
+  font-size: .6em;
+  letter-spacing: -1px;
+}

@@ -1,0 +1,50 @@
+// Defaults block/form
+#defaults {
+  padding: .3em 1em .7em;
+  font-family: 'Strait', sans-serif;
+}
+.select-wrp {
+  @include span(50% none);
+  label {
+    display: block;
+    font-size: .7em;
+  }
+  select {
+    width: 85%;
+    font-size: .7em;
+    padding: .1em .2em;
+    vertical-align: top;
+    color: #bbb;
+    border: none;
+    background: darken($gray, 13%);
+    @include border-radius(3px);
+  }
+  option {
+    color: #222;
+    background: #fff;
+  }
+}
+.checkboxes-wrp {
+  @include span(50% none);
+  font-size: .7em;
+  .checkbox-wrp {
+    margin-bottom: 1em;
+  }
+  .tab-size {
+    display: none;
+    padding-left: 1em;
+  }
+  input#softTabs:checked ~ .tab-size {
+    display: block;
+  }
+  input[type="number"] {
+    width: 2em;
+    padding-top: .15em;
+    border: 1px solid $red;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background: darken($red, 10%);
+    @include border-radius(2px);
+  }
+}

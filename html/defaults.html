@@ -1,0 +1,71 @@
+<h2>Choose your defaults:</h2>
+<div class="select-wrp">
+  <label for="syntax">Default syntax:</label>
+  <select id="syntax" size="1">
+    <option value="abap">ABAP</option><option value="asciidoc">AsciiDoc</option><option value="c9search">C9Search</option><option value="coffee">CoffeeScript</option><option value="coldfusion">ColdFusion</option><option value="csharp">C#</option><option value="css">CSS</option><option value="curly">Curly</option><option value="dart">Dart</option><option value="diff">Diff</option><option value="dot">Dot</option><option value="glsl">Glsl</option><option value="golang">Go</option><option value="groovy">Groovy</option><option value="haxe">haXe</option><option value="haml">HAML</option><option value="html">HTML</option><option value="c_cpp">C/C++</option><option value="clojure">Clojure</option><option value="jade">Jade</option><option value="java">Java</option><option value="jsp">JSP</option><option value="javascript" selected="selected">JavaScript</option><option value="json">JSON</option><option value="jsx">JSX</option><option value="latex">LaTeX</option><option value="less">LESS</option><option value="lisp">Lisp</option><option value="liquid">Liquid</option><option value="lua">Lua</option><option value="luapage">LuaPage</option><option value="lucene">Lucene</option><option value="makefile">Makefile</option><option value="markdown">Markdown</option><option value="objectivec">Objective-C</option><option value="ocaml">OCaml</option><option value="perl">Perl</option><option value="pgsql">pgSQL</option><option value="php">PHP</option><option value="powershell">Powershell</option><option value="python">Python</option><option value="r">R</option><option value="rdoc">RDoc</option><option value="rhtml">RHTML</option><option value="ruby">Ruby</option><option value="scad">OpenSCAD</option><option value="scala">Scala</option><option value="scss">SCSS</option><option value="sh">SH</option><option value="sql">SQL</option><option value="stylus">Stylus</option><option value="svg">SVG</option><option value="tcl">Tcl</option><option value="tex">Tex</option><option value="text">Text</option><option value="textile">Textile</option><option value="typescript">Typescript</option><option value="vbscript">VBScript</option><option value="xml">XML</option><option value="xquery">XQuery</option><option value="yaml">YAML</option>
+  </select>
+
+  <label for="fontSize">Font size:</label>
+  <select id="fontSize" size="1">
+    <option value="10px">10px</option>
+    <option value="11px">11px</option>
+    <option value="12px">12px</option>
+    <option value="13px">13px</option>
+    <option value="14px">14px</option>
+    <option value="16px">16px</option>
+    <option value="18px" selected="selected">18px</option>
+    <option value="20px">20px</option>
+    <option value="24px">24px</option>
+  </select>
+
+  <label for="theme">Theme:</label>
+  <select id="theme" size="1">
+    <optgroup label="Bright">
+      <option value="ace/theme/chrome">Chrome</option>
+      <option value="ace/theme/clouds">Clouds</option>
+      <option value="ace/theme/crimson_editor">Crimson Editor</option>
+      <option value="ace/theme/dawn">Dawn</option>
+      <option value="ace/theme/dreamweaver">Dreamweaver</option>
+      <option value="ace/theme/eclipse">Eclipse</option>
+      <option value="ace/theme/github">GitHub</option>
+      <option value="ace/theme/solarized_light">Solarized Light</option>
+      <option value="ace/theme/textmate">TextMate</option>
+      <option value="ace/theme/tomorrow">Tomorrow</option>
+      <option value="ace/theme/xcode">XCode</option>
+    </optgroup>
+    <optgroup label="Dark">
+      <option value="ace/theme/ambiance">Ambiance</option>
+      <option value="ace/theme/chaos">Chaos</option>
+      <option value="ace/theme/clouds_midnight">Clouds Midnight</option>
+      <option value="ace/theme/cobalt">Cobalt</option>
+      <option value="ace/theme/idle_fingers">idleFingers</option>
+      <option value="ace/theme/kr_theme">krTheme</option>
+      <option value="ace/theme/merbivore">Merbivore</option>
+      <option value="ace/theme/merbivore_soft">Merbivore Soft</option>
+      <option value="ace/theme/mono_industrial">Mono Industrial</option>
+      <option value="ace/theme/monokai" selected="selected">Monokai</option>
+      <option value="ace/theme/pastel_on_dark">Pastel on dark</option>
+      <option value="ace/theme/solarized_dark">Solarized Dark</option>
+      <option value="ace/theme/twilight">Twilight</option>
+      <option value="ace/theme/tomorrow_night">Tomorrow Night</option>
+      <option value="ace/theme/tomorrow_night_blue">Tomorrow Night Blue</option>
+      <option value="ace/theme/tomorrow_night_bright">Tomorrow Night Bright</option>
+      <option value="ace/theme/tomorrow_night_eighties">Tomorrow Night 80s</option>
+      <option value="ace/theme/vibrant_ink">Vibrant Ink</option>
+    </optgroup>
+  </select>
+</div>
+<div class="checkboxes-wrp">
+  <div class="checkbox-wrp">
+    <input type="checkbox" id="softTabs" checked="checked">
+    <label for="softTabs">Use Soft Tabs</label><span class="tab-size">of <input type="number" id="tabSize" size="1" value="2"> spaces</span>
+  </div>
+  <div class="checkbox-wrp">
+    <input type="checkbox" name="indentGuides" id="indentGuides" checked="checked">
+    <label for="indentGuides">Show Indent Guides</label>
+  </div>
+  <div class="checkbox-wrp">
+    <input type="checkbox" name="showInvisibles" id="showInvisibles" checked="checked">
+    <label for="showInvisibles">Show Invisibles</label>
+  </div>
+</div>

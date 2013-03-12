@@ -1,0 +1,28 @@
+// Mixins and Classes
+
+%box {
+  border: 1px solid darken($red, 4%);
+  @include border-radius(10px);
+  @include box-shadow(inset 0 0 40px darken($red, 10%));
+}
+
+
+@mixin count($id) {
+  body {
+    counter-reset: $id;
+  }
+  #{$id} {
+    position: relative;
+  }
+  #{$id}:before {
+    counter-increment: $id;
+    content: counter($id);
+    position: absolute;
+    top: -.7em;
+    left: -20%;
+    font: bold 10em/1 sans-serif;
+    text-align: center;
+    color: rgba(#fff, .07);
+    text-shadow: none;
+  }
+}

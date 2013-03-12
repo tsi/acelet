@@ -1,0 +1,39 @@
+// Intro text
+.intro {
+  font-size: 1.7em;
+}
+
+h2 {
+  font-family: 'Strait', sans-serif;
+}
+
+section {
+  &#snippet,
+  &#defaults {
+    @extend %box;
+    text-align: left;
+  }
+}
+
+.now {
+  font-family: 'Strait', sans-serif;
+  padding: 1em;
+}
+
+// Footer
+footer {
+  font-family: 'Strait', sans-serif;
+  opacity: .7;
+  overflow: hidden;
+  font-size: 85%;
+}
+.footer-first {
+  float: left;
+}
+.footer-second {
+  float: right;
+}
+.footer-first,
+.footer-second {
+  padding: 1em 1em .2em;
+}

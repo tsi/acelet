@@ -1,0 +1,38 @@
+@include count(section);
+html, body {
+  height: 100%;
+}
+
+section {
+  @include span(24.3% none);
+  margin-left: 6%;
+  margin-right: 3%;
+  margin-top: 5em;
+  @include transition(all 1s);
+  h2 {
+    margin-top: -2em;
+    margin-left: -1.3em;
+    text-align: left;
+  }
+  &#snippet {
+    padding: 0 .5em;
+  }
+}
+
+.text,
+p,
+footer {
+  @include row;
+}
+
+// Sticky footer
+#main {
+  margin-bottom: -3em;
+  min-height: 100%;
+  height: 100%;
+  @include box-sizing;
+  @include clear;
+}
+footer {
+  width: 100%;
+}
