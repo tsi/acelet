@@ -67,7 +67,8 @@ section:before {
   font: bold 10em/1 sans-serif;
   text-align: center;
   color: rgba(255, 255, 255, 0.07);
-  text-shadow: none; }
+  text-shadow: none;
+  z-index: -1; }
 
 html, body {
   height: 100%; }
