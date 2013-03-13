@@ -15,7 +15,7 @@ section#snippet, section#defaults {
   box-shadow: inset 0 0 40px #270101; }
 
 html, button, input, select, textarea {
-  color: #fff; }
+  color: #ebe0e0; }
 
 html {
   min-height: 100%;
@@ -28,7 +28,8 @@ html {
 body {
   font: 24px/1.5 normal "Oleo Script Swash Caps", cursive;
   text-shadow: -1px -1px 4px #270101;
-  text-align: center; }
+  text-align: center;
+  opacity: .9; }
 
 ::-moz-selection {
   background: #a40404;

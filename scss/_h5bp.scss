@@ -3,7 +3,7 @@ button,
 input,
 select,
 textarea {
-  color: #fff;
+  color: #ebe0e0;
 }
 
 html {
@@ -15,6 +15,7 @@ body {
   font: 24px/1.5 normal 'Oleo Script Swash Caps', cursive;
   text-shadow: -1px -1px 4px darken($red, 10%);
   text-align: center;
+  opacity: .9;
 }
 
 ::-moz-selection {
