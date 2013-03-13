@@ -1,0 +1,64 @@
+
+.too-small {
+  display: none;
+}
+
+@media (max-width: 1380px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1120px) {
+  #bookmarklet {
+    @include span(50% none);
+  }
+  #snippet {
+    @include span(33% none);
+    margin-left: 10%;
+    margin-right: 7%;
+  }
+  #defaults {
+    margin-top: 7em;
+  }
+  #defaults,
+  #now {
+    @include row;
+    @include span(60% none);
+    margin-left: 20%;
+    h2 {
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #bookmarklet {
+    margin-top: 6em;
+  }
+  #bookmarklet,
+  #snippet {
+    @include row;
+    @include span(60% none);
+    margin-left: 20%;
+    h2 {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 600px), (max-height: 600px) {
+  .intro,
+  section {
+    display: none;
+  }
+  .too-small {
+    display: block;
+  }
+  .footer-first,
+  .footer-second {
+    @include row;
+    @include span(100% none);
+    padding: 0 0 0.5em;
+  }
+}

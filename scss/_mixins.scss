@@ -11,16 +11,16 @@
   body {
     counter-reset: $id;
   }
-  #{$id} {
+  #{$id} h2 {
     position: relative;
   }
-  #{$id}:before {
+  #{$id} h2:before {
     counter-increment: $id;
     content: counter($id);
     position: absolute;
-    top: -.7em;
-    left: -20%;
-    font: bold 10em/1 sans-serif;
+    top: -.4em;
+    left: -10%;
+    font: bold 8em/1 sans-serif;
     text-align: center;
     color: rgba(#fff, .07);
     text-shadow: none;

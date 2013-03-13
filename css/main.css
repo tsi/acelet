@@ -55,16 +55,16 @@ pre {
 body {
   counter-reset: section; }
 
-section {
+section h2 {
   position: relative; }
 
-section:before {
+section h2:before {
   counter-increment: section;
   content: counter(section);
   position: absolute;
-  top: -.7em;
-  left: -20%;
-  font: bold 10em/1 sans-serif;
+  top: -.4em;
+  left: -10%;
+  font: bold 8em/1 sans-serif;
   text-align: center;
   color: rgba(255, 255, 255, 0.07);
   text-shadow: none;
@@ -74,27 +74,67 @@ html, body {
   height: 100%; }
 
 section {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 24.3%;
-  float: left;
-  margin-left: 6%;
-  margin-right: 3%;
   margin-top: 5em;
+  position: relative;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s; }
 section h2 {
   margin-top: -2em;
-  margin-left: -1.3em;
-  text-align: left; }
-section#snippet {
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+#bookmarklet {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.3%;
+  float: left; }
+#bookmarklet h2 {
+  margin-left: 6%; }
+
+#snippet, #defaults {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 24.3%;
+  float: left;
+  margin-left: 6%;
+  margin-right: 3%; }
+#snippet h2, #defaults h2 {
+  left: -1em; }
+
+#snippet {
   padding: 0 0.5em; }
 
-.text, p, footer {
-  clear: left; }
+#now {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  clear: left;
+  margin: 4em auto 2em; }
+#now h2 {
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto; }
+
+p, footer {
+  clear: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  -webkit-transition: font-size 0.6s;
+  -moz-transition: font-size 0.6s;
+  -o-transition: font-size 0.6s;
+  transition: font-size 0.6s; }
 
 #main {
   margin-bottom: -3em;
@@ -113,7 +153,7 @@ footer {
   width: 100%; }
 
 #defaults {
-  padding: 0.3em 1em 0.7em;
+  padding: 0.7em 1em 0.5em;
   font-family: "Strait", sans-serif; }
 
 .select-wrp {
@@ -171,17 +211,20 @@ footer {
   border-radius: 2px; }
 
 .intro {
-  font-size: 1.7em; }
+  font-size: 2em;
+  padding: 0.8em 2em 0;
+  line-height: 1.4; }
+
+.too-small {
+  font-size: 2.2em;
+  margin-top: 30%;
+  padding: 0 1em; }
 
 h2 {
   font-family: "Strait", sans-serif; }
 
 section#snippet, section#defaults {
   text-align: left; }
-
-.now {
-  font-family: "Strait", sans-serif;
-  padding: 1em; }
 
 footer {
   font-family: "Strait", sans-serif;
@@ -241,6 +284,71 @@ a.acelet:hover, a.acelet.highlight {
 a.acelet:hover:before, a.acelet.highlight:before {
   text-shadow: 0 0 4px #720303; }
 
+.too-small {
+  display: none; }
+
+@media (max-width: 1380px) {
+  body {
+    font-size: 20px; } }
+@media (max-width: 1120px) {
+  #bookmarklet {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: left; }
+
+  #snippet {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33%;
+    float: left;
+    margin-left: 10%;
+    margin-right: 7%; }
+
+  #defaults {
+    margin-top: 7em; }
+
+  #defaults, #now {
+    clear: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 60%;
+    float: left;
+    margin-left: 20%; }
+  #defaults h2, #now h2 {
+    left: 0; } }
+@media (max-width: 800px) {
+  #bookmarklet {
+    margin-top: 6em; }
+
+  #bookmarklet, #snippet {
+    clear: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 60%;
+    float: left;
+    margin-left: 20%; }
+  #bookmarklet h2, #snippet h2 {
+    margin-left: 0; } }
+@media (max-width: 600px), (max-height: 600px) {
+  .intro, section {
+    display: none; }
+
+  .too-small {
+    display: block; }
+
+  .footer-first, .footer-second {
+    clear: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding: 0 0 0.5em; } }
 .share-btns {
   position: absolute;
   top: 0;

@@ -4,25 +4,53 @@ html, body {
 }
 
 section {
-  @include span(24.3% none);
-  margin-left: 6%;
-  margin-right: 3%;
   margin-top: 5em;
+  position: relative;
   @include transition(all 1s);
   h2 {
     margin-top: -2em;
-    margin-left: -1.3em;
     text-align: left;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-  &#snippet {
-    padding: 0 .5em;
+}
+#bookmarklet {
+  @include span(33.3% none);
+  h2 {
+    margin-left: 6%;
+  }
+}
+#snippet,
+#defaults {
+  @include span(24.3% none);
+  margin-left: 6%;
+  margin-right: 3%;
+  h2 {
+    left: -1em;
+  }
+}
+#snippet {
+  padding: 0 .5em;
+}
+#now {
+  @include span(100% none);
+  @include row;
+  margin: 4em auto 2em;
+  h2 {
+    position: relative;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
 
-.text,
+
 p,
 footer {
   @include row;
+  @include span(100% none);
+  @include transition(font-size .6s);
 }
 
 // Sticky footer

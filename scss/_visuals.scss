@@ -1,8 +1,14 @@
-// Intro text
-.intro {
-  font-size: 1.7em;
-}
 
+.intro {
+  font-size: 2em;
+  padding: .8em 2em 0;
+  line-height: 1.4;
+}
+.too-small {
+  font-size: 2.2em;
+  margin-top: 30%;
+  padding: 0 1em;
+}
 h2 {
   font-family: 'Strait', sans-serif;
 }
@@ -15,10 +21,6 @@ section {
   }
 }
 
-.now {
-  font-family: 'Strait', sans-serif;
-  padding: 1em;
-}
 
 // Footer
 footer {
