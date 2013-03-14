@@ -28,8 +28,7 @@ html {
 body {
   font: 24px/1.5 normal "Oleo Script Swash Caps", cursive;
   text-shadow: -1px -1px 4px #270101;
-  text-align: center;
-  opacity: .9; }
+  text-align: center; }
 
 ::-moz-selection {
   background: #a40404;
