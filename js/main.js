@@ -29,7 +29,7 @@
         showInvisibles: true
       };
       var updateAcelet = function() {
-        acelet = "javascript:(function(){var aceletTab=window.open('about:blank');var script=document.createElement('script');script.type='text/javascript';script.id='aceletScript';script.async=true;script.onload=function(){aceletTab.location=acelet('"+options.syntax+"','"+options.fontSize+"','"+options.theme+"','"+options.softTabs+"','"+options.tabSize+"','"+options.wrapText+"','"+options.indentGuides+"','"+options.showInvisibles+"');aceletTab.focus();};script.src='https://raw.github.com/tsi/acelet/master/acelet.min.js';document.body.appendChild(script);}());";
+        acelet = "javascript:(function(){var aceletTab=window.open('about:blank');if(!document.getElementById('aceletScript')){var script=document.createElement('script');script.type='text/javascript';script.id='aceletScript';script.async=true;script.onload=function(){aceletTab.location=acelet('"+options.syntax+"','"+options.fontSize+"','"+options.theme+"','"+options.softTabs+"','"+options.tabSize+"','"+options.wrapText+"','"+options.indentGuides+"','"+options.showInvisibles+"');aceletTab.focus();};script.src='https://raw.github.com/tsi/acelet/master/acelet.min.js';document.body.appendChild(script);}else{aceletTab.location=acelet('"+options.syntax+"','"+options.fontSize+"','"+options.theme+"','"+options.softTabs+"','"+options.tabSize+"','"+options.wrapText+"','"+options.indentGuides+"','"+options.showInvisibles+"');aceletTab.focus();}}());";
         $('a.acelet').attr('href', acelet).addClass("highlight");
         window.setTimeout(function() {
           $('a.acelet').removeClass("highlight");
@@ -70,16 +70,6 @@
       trackGA();
 
     };
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-39309928-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
 
   });
 })(jQuery);
