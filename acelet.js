@@ -52,7 +52,14 @@ function acelet(syntax, fontSize, theme, softTabs, tabSize, wrapText, indentGuid
       function changeMode(mode) {
         e.getSession().setMode("ace/mode/" + mode.options[mode.selectedIndex].value);
       }
-
+      window.onbeforeunload = function(e) {
+        e = e || window.event;
+        if (e) {
+          e.returnValue = "Did you save?";
+        }
+        return "Did you save?";
+      };
+      
       /*
       inspired by the discussion on https://coderwall.com/p/lhsrcq
       Written by Tsachi Shlidor (@shlidor)
