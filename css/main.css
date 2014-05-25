@@ -365,4 +365,4 @@ a.acelet:hover:before, a.acelet.highlight:before {
 .share-btns > iframe:hover, .share-btns > div:hover {
   opacity: 1; }
 .share-btns .fb-like > span {
-  vertical-align: top; }
+  vertical-align: top !important; }
