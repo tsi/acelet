@@ -47,6 +47,7 @@ function acelet(syntax, fontSize, theme, softTabs, tabSize, wrapText, indentGuid
                .replace(/U0025/ig, "\%");
       }
       function saveToFile() {
+        window.onbeforeunload = null;
         window.location = "data:application/octet-stream," + escape(e.getSession().getValue());
       }
       function changeMode(mode) {
@@ -64,7 +65,7 @@ function acelet(syntax, fontSize, theme, softTabs, tabSize, wrapText, indentGuid
       inspired by the discussion on https://coderwall.com/p/lhsrcq
       Written by Tsachi Shlidor (@shlidor)
       BSD Licenced
-      
+
       Possible improvements:
       * Improve encoding/decoding
       * New

@@ -9,7 +9,7 @@ javascript:(function(){
       aceletTab.location = acelet('"+options.syntax+"','"+options.fontSize+"','"+options.theme+"','"+options.softTabs+"','"+options.tabSize+"','"+options.wrapText+"','"+options.indentGuides+"','"+options.showInvisibles+"');
       aceletTab.focus();
     };
-    script.src = 'https://raw.github.com/tsi/acelet/master/acelet.min.js';
+    script.src = 'https://raw.github.com/tsi/acelet/gh-pages/acelet.min.js';
     document.body.appendChild(script);
   }else{
     aceletTab.location = acelet('"+options.syntax+"','"+options.fontSize+"','"+options.theme+"','"+options.softTabs+"','"+options.tabSize+"','"+options.wrapText+"','"+options.indentGuides+"','"+options.showInvisibles+"');

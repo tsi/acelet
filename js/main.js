@@ -29,7 +29,7 @@
         showInvisibles: true
       };
       var updateAcelet = function() {
-        acelet = "javascript:(function(){var aceletTab=window.open('about:blank');if(!document.getElementById('aceletScript')){var script=document.createElement('script');script.type='text/javascript';script.id='aceletScript';script.async=true;script.onload=function(){aceletTab.location=acelet('"+options.syntax+"','"+options.fontSize+"','"+options.theme+"','"+options.softTabs+"','"+options.tabSize+"','"+options.wrapText+"','"+options.indentGuides+"','"+options.showInvisibles+"');aceletTab.focus();};script.src='https://raw.github.com/tsi/acelet/master/acelet.min.js';document.body.appendChild(script);}else{aceletTab.location=acelet('"+options.syntax+"','"+options.fontSize+"','"+options.theme+"','"+options.softTabs+"','"+options.tabSize+"','"+options.wrapText+"','"+options.indentGuides+"','"+options.showInvisibles+"');aceletTab.focus();}}());";
+        acelet = "javascript:(function(){var aceletTab=window.open('about:blank');if(!document.getElementById('aceletScript')){var script=document.createElement('script');script.type='text/javascript';script.id='aceletScript';script.async=true;script.onload=function(){aceletTab.location=acelet('"+options.syntax+"','"+options.fontSize+"','"+options.theme+"','"+options.softTabs+"','"+options.tabSize+"','"+options.wrapText+"','"+options.indentGuides+"','"+options.showInvisibles+"');aceletTab.focus();};script.src='https://raw.github.com/tsi/acelet/gh-pages/acelet.min.js';document.body.appendChild(script);}else{aceletTab.location=acelet('"+options.syntax+"','"+options.fontSize+"','"+options.theme+"','"+options.softTabs+"','"+options.tabSize+"','"+options.wrapText+"','"+options.indentGuides+"','"+options.showInvisibles+"');aceletTab.focus();}}());";
         $('a.acelet').attr('href', acelet).addClass("highlight");
         window.setTimeout(function() {
           $('a.acelet').removeClass("highlight");
@@ -78,7 +78,7 @@
 // Async Sharing Buttons (Facebook, Twitter)
 // http://css-tricks.com/snippets/javascript/async-sharing-buttons-g-facebook-twitter/
 (function(doc, script) {
-  var js, 
+  var js,
       fjs = doc.getElementsByTagName(script)[0],
       frag = doc.createDocumentFragment(),
       add = function(url, id) {
@@ -88,7 +88,7 @@
           id && (js.id = id);
           frag.appendChild( js );
       };
-      
+
     // Facebook SDK
     add('//connect.facebook.net/en_US/all.js#xfbml=1&appId=200103733347528', 'facebook-jssdk');
     // Twitter SDK
